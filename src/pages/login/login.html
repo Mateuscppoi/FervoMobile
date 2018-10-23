@@ -1,0 +1,69 @@
+<ion-header >
+  <ion-navbar color="light" text-center style="height: 110px;">
+    <div class="col-xs-12">
+      <img widht="80" height="80" src="../../assets/imgs/Logo.png">
+    </div>
+    <div class="col-xs-12" style="margin-top: -7%; margin-left: 2%">
+     <ion-label style="font-family: Norwester; margin-block-end: 0%; font-size: 24px; color: #C2381E;">
+       FERVO
+      </ion-label>
+  </div>
+  </ion-navbar>
+</ion-header>
+<ion-content class="mainColor" padding id="page2">
+  <form id="login-form1">
+      <div class="col-xs-12">
+    <ion-list id="login-list1">
+      <ion-item id="login-input1">
+        <ion-label style="font-family: Norwester">
+          NOME/E-MAIL
+        </ion-label>
+        <ion-input type="email" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item id="login-input2">
+        <ion-label style="font-family: Norwester">
+          SENHA
+        </ion-label>
+        <ion-input type="password" placeholder=""></ion-input>
+      </ion-item>
+    </ion-list>
+    </div>
+    <div class="col-xs-12" text-center>
+      <div>
+    <button class="login-button" padding-hotizontal ion-button round on-click="goToPage()" style="font-family: Norwester;background-color: #0D0A0A; width: 300px; color: #C2381E; font-size: 20px;">
+      LOGIN
+    </button>
+  </div>
+  <div></div>
+    <button class="login-button" padding-hotizontal ion-button round on-click="goToPage()" style="font-family: Norwester;background-color: #0D0A0A; width: 300px; color: #C2381E; font-size: 20px;">
+        CADASTRAR
+      </button>
+      <div>
+      <button class="login-button" padding-hotizontal ion-button clear round on-click="goToPage()" style="font-family: Norwester; width: 300px; color: #C2381E; font-size: 16px; font-style: inherit">
+        <u>ESQUECEU SUA SENHA?</u>
+      </button>
+    </div>
+      <div>
+      <button class="login-button" padding-hotizontal ion-button round on-click="goToPage()" style="font-family: Norwester;background-color: #3b5997; width: 300px; color: white; font-size: 20px;">
+          <ion-icon name="logo-facebook" padding style="margin-left: -49px;"></ion-icon> 
+          <span style="margin-left: 27px">LOGIN COM FACEBOOK</span> 
+        </button>
+      </div>
+        <div>
+        <button class="login-button" padding-hotizontal ion-button round on-click="goToPage()" style="font-family: Norwester;background-color: #1da1f3; width: 300px; color: white; font-size: 20px;">
+            <ion-icon name="logo-twitter" padding style="margin-left: -70px;"></ion-icon>  
+            <span style="margin-left: 25px">LOGIN COM TWITTER</span>
+          </button>
+        </div>
+          <div>
+          <button class="login-button" padding-hotizontal ion-button round text-center on-click="goToPage()" style="font-family: Norwester;background-color: white; width: 300px; color: black; font-size: 20px;">
+              <ion-icon name="logo-googleplus" padding style="margin-left: -70px; color: red"></ion-icon>  
+            <span style="margin-left: 23px">LOGIN COM GOOGLE</span>
+            </button>
+          </div>
+    <button id="login-button2" ion-button clear color="positive" block href-inappbrowser="/signup" style="font-family: Norwester;color: #C2381E">
+      CONTINUAR SEM LOGIN
+    </button>
+  </div>
+  </form>
+</ion-content>

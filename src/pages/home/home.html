@@ -1,0 +1,19 @@
+
+<ion-content padding>
+    <div class="jumbotron" style="width: 250px; height: 100px; border-radius: 20px;position: absolute; margin-left: 50px; background-color: #230202">
+      <h3 text-center style="color: white">Test</h3>
+    </div>
+    
+  <div #map id="map">
+</div> 
+<ion-list>
+
+  <button ion-button round on-click="insertLocations()" style="position: absolute; margin-top: -35px; margin-left: 80px">
+      <ion-icon name="locate" padding></ion-icon> 
+  </button>
+  <button ion-button round text-right style="width: 20px; position: absolute;margin-top: -35px; margin-left: 300px" on-click="getLocation()">
+      <ion-icon name="refresh"></ion-icon> 
+  </button>
+</ion-list>
+</ion-content>
+
