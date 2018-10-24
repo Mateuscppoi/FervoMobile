@@ -6,7 +6,8 @@ import {
   CameraPosition,
   MarkerOptions,
   Marker,
-  Environment
+  Environment,
+  MarkerCluster
 } from '@ionic-native/google-maps';
 import { HomeService } from '../home/home.service'
 import { Component, ViewChild, ElementRef } from '@angular/core';
@@ -24,6 +25,7 @@ export class HomePage {
   userLocation: any;
   map: GoogleMap;
   heatmap: any;
+  markerCluster: any;
   latitude: any;
   longitude: any;
   marker: any;
@@ -131,22 +133,41 @@ export class HomePage {
       }
  
       this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+      this.marker = new google.maps.Marker({
+        // The below line is equivalent to writing:
+        // position: new google.maps.LatLng(-34.397, 150.644)
+        position: {lat: this.latitude, lng: this.longitude},
+        map: this.map
+      });
       this.heatmap = new google.maps.visualization.HeatmapLayer({
         data: this.getPoints(),
         map: this.map
       });
- 
     }, (err) => {
       console.log(err);
     });
   }
 
-  getLocations(){
+  updateHeatMap(){
+    this.getLocations();
+  }
+
+  getLocations() {
+    let locations = []
     this.geolocation.getCurrentPosition().then((position) => {
       this.latitude = position.coords.latitude.toString();
       this.longitude = position.coords.longitude.toString();
+      
           this.homeService.getLocations(this.latitude, this.longitude).subscribe((list : GoogleMapsDTO[]) => {
-            list.forEach( map => map.longitude)
+            list.forEach( points => {
+              var test = new google.maps.LatLng(points.latitude, points.longitude)
+              locations.push(test);
+            })
+            console.log(locations);
+            this.heatmap = new google.maps.visualization.HeatmapLayer({
+              data: locations,
+              map: this.map
+            });
         });
     });
   };

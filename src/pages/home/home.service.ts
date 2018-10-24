@@ -7,7 +7,7 @@ import { GoogleMapsDTO } from './googleMapsDTO';
 @Injectable()
 export class HomeService {
     insertUrl = 'http://localhost:8990/api/insertLocation';  // URL to web api
-    getUrl = "http://localhost:8990/api/testLocation";
+    getUrl = "http://localhost:8990/api/getLocations";
 
     constructor(
         private http: HttpClient) {
