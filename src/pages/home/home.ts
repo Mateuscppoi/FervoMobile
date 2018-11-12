@@ -9,6 +9,7 @@ import {
   Environment,
   MarkerCluster
 } from '@ionic-native/google-maps';
+import { NavController, NavParams } from 'ionic-angular';
 import { HomeService } from '../home/home.service'
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation';
@@ -33,7 +34,7 @@ export class HomePage {
   currentCity: any;
   test: string;
  
-  constructor(private geolocation: Geolocation, 
+  constructor(public navCtrl: NavController, private geolocation: Geolocation, 
     private homeService: HomeService,
     private geocoder: NativeGeocoder) { }
 

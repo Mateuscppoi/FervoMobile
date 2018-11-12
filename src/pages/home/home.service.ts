@@ -6,8 +6,8 @@ import { GoogleMapsDTO } from './googleMapsDTO';
 
 @Injectable()
 export class HomeService {
-    insertUrl = 'http://localhost:8990/api/insertLocation';  // URL to web api
-    getUrl = "http://localhost:8990/api/getLocations";
+    insertUrl = 'https://testfevheroku.herokuapp.com/api/insertLocation';  // URL to web api
+    getUrl = "https://testfevheroku.herokuapp.com/api/getLocations";
 
     constructor(
         private http: HttpClient) {

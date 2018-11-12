@@ -20,7 +20,6 @@ import {
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
-import { TabsPage } from '../pages/tabs/tabs';
 import { HomeService } from '../pages/home/home.service'
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -33,7 +32,6 @@ import { LoginPage } from '../pages/login/login';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage,
     LoginPage
   ],
   imports: [
@@ -47,7 +45,6 @@ import { LoginPage } from '../pages/login/login';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage,
     LoginPage
   ],
   providers: [

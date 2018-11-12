@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { TabsPage } from '../tabs/tabs';
+import { HomePage } from '../home/home';
 
 @Component({
   selector: 'page-login',
@@ -12,6 +12,6 @@ export class LoginPage {
   }
   goToPage(params){
     if (!params) params = {};
-    this.navCtrl.push(TabsPage);
+    this.navCtrl.push(HomePage);
   }
 }
